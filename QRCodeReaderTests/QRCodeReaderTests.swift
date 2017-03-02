@@ -26,7 +26,14 @@ class QRCodeReaderTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-//    func test
+    func test1() {
+        let viewController = ViewController()
+         viewController.infoLabel = UILabel()
+        
+        viewController.found(info: "https://vk.com")
+        XCTAssertFalse(viewController.infoLabel.isHidden)
+        XCTAssertTrue(viewController.infoLabel.text == "https://vk.com")
+    }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
